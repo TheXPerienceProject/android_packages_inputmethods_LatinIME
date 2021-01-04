@@ -190,7 +190,7 @@ public class RichInputMethodSubtype {
                     false /* isAuxiliary */, false /* overridesImplicitlyEnabledSubtype */,
                     SUBTYPE_ID_OF_PLACEHOLDER_NO_LANGUAGE_SUBTYPE));
     // Caveat: We probably should remove this when we add an Emoji subtype in {@link R.xml.method}.
-    // Dummy Emoji subtype. See {@link R.xml.method}.
+    // Placeholder Emoji subtype. See {@link R.xml.method}.
     private static final int SUBTYPE_ID_OF_PLACEHOLDER_EMOJI_SUBTYPE = 0xd78b2ed0;
     private static final String EXTRA_VALUE_OF_PLACEHOLDER_EMOJI_SUBTYPE =
             "KeyboardLayoutSet=" + SubtypeLocaleUtils.EMOJI
@@ -222,7 +222,7 @@ public class RichInputMethodSubtype {
             return noLanguageSubtype;
         }
         Log.w(TAG, "Can't find any language with QWERTY subtype");
-        Log.w(TAG, "No input method subtype found; returning dummy subtype: "
+        Log.w(TAG, "No input method subtype found; returning placeholder subtype: "
                 + PLACEHOLDER_NO_LANGUAGE_SUBTYPE);
         return PLACEHOLDER_NO_LANGUAGE_SUBTYPE;
     }
@@ -243,7 +243,7 @@ public class RichInputMethodSubtype {
             return emojiSubtype;
         }
         Log.w(TAG, "Can't find emoji subtype");
-        Log.w(TAG, "No input method subtype found; returning dummy subtype: "
+        Log.w(TAG, "No input method subtype found; returning placeholder subtype: "
                 + PLACEHOLDER_EMOJI_SUBTYPE);
         return PLACEHOLDER_EMOJI_SUBTYPE;
     }
